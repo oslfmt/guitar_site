@@ -8,6 +8,10 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
+.d-none {
+    display: none;
+}
+
 .main {
     height: 100vh;
     background-image: url("./img/cover.jpg");
@@ -96,4 +100,16 @@ h1 {
     font-size: 30px;
     display: flex;
     margin-bottom: 30px;
+}
+
+.chord-box {
+    height: 300px;
+    width: 200px;
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+.chord-list {
+    font-size: 20px;
 }

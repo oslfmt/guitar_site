@@ -1,3 +1,7 @@
+const start = document.querySelector('.button');
+const chordBox = document.querySelector('.chord-box');
+const chordList = document.querySelector('.chord-list');
+
 function getRandomNum(min, max) {
     return Math.floor(Math.random() * (max - min) + min);
 }
@@ -84,5 +88,35 @@ function getRandomQuality() {
     return randomQuality;
 }
 
-let randomChord = getRandomNote() + ' ' + getRandomQuality();
-console.log(randomChord);
+/**
+ * Runs the chord trainer program, generating 5 random chords and pushing into an array
+ */
+function runChordTrainer() {
+    let chords = [];
+    for (let i = 0; i < 5; i++) {
+        let chord = getRandomNote() + ' ' + getRandomQuality();
+        chords.push(chord);
+    }
+    return chords;
+}
+
+function updateUI(chords) {
+    chordBox.innerHTML = `
+        <ol class="chord-list">
+            <li>${chords[0]}</li>
+            <li>${chords[1]}</li>
+            <li>${chords[2]}</li>
+            <li>${chords[3]}</li>
+            <li>${chords[4]}</li>
+        </ol>
+    `;
+
+    if (chordList.classList.contains('d-none')) {
+        chordList.classList.remove('d-none');
+    }
+}
+
+start.addEventListener('click', e => {
+    let chords = runChordTrainer();
+    updateUI(chords);
+})
