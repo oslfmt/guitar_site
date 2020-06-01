@@ -9,7 +9,7 @@ body {
 }
 
 .d-none {
-    display: none;
+    visibility: hidden;
 }
 
 .main {
@@ -84,6 +84,7 @@ h1 {
     text-align: center;
     background-color: #f9ca24;
     color: white;
+    margin: 20px;
 }
 
 .button:hover {
@@ -112,4 +113,13 @@ h1 {
 
 .chord-list {
     font-size: 20px;
+}
+
+/* CHORD DRILLS */
+.drill {
+    display: flex;
+    flex-direction: column;
+    background-color: #c7ecee;
+    text-align: center;
+    padding: 40px;
 }
