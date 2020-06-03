@@ -127,3 +127,8 @@ h1 {
 .counter p {
     font-size: 30px;
 }
+
+.fretboard {
+    height: 150px;
+    width: 900px;
+}
