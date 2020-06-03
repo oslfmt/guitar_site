@@ -123,3 +123,7 @@ h1 {
     text-align: center;
     padding: 40px;
 }
+
+.counter p {
+    font-size: 30px;
+}

@@ -5,17 +5,17 @@ function countdown() {
     let seconds = 60;
 
     function tick() {
-        counter.innerHTML = String(seconds);
+        counter.innerHTML = `<p>${String(seconds)}</p>`;
         seconds--;
 
         if (seconds > 0) {
             setTimeout(tick, 1000);
         } else {
-            counter.innerHTML = `Time's Up!`;
+            counter.innerHTML = `<p>Time's Up!</p>`;
             button.classList.remove('d-none');
         }
     }
-    tick()
+    tick();
 }
 
 button.addEventListener('click', () => {
@@ -24,7 +24,7 @@ button.addEventListener('click', () => {
     // countdown to start
     let i = 3;
     let timeout = setInterval(() => {
-        counter.innerHTML = `Starting in ${i}`;
+        counter.innerHTML = `<p>Starting in ${i}</p>`;
         i--;
         if (i < 0) {
             // stop countdown
@@ -34,5 +34,4 @@ button.addEventListener('click', () => {
             countdown();
         }
     }, 1000);
-
 });
